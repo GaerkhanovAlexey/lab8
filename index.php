@@ -3,9 +3,9 @@
 use leha\MyLog;
 use leha\QuEquation;
 
-include "core/EquationInterface.php";
-include "core/LogAbstract.php";
-include "core/LogInterface.php";
+include "core/core/EquationInterface.php";
+include "core/core/LogAbstract.php";
+include "core/core/LogInterface.php";
 include "leha/MyLog.php";
 include "leha/Equation.php";
 include "leha/QuEquation.php";
