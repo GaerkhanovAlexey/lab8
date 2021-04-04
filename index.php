@@ -15,6 +15,7 @@ ini_set("display_errors", 1);
 error_reporting(-1);
 
 try {
+     MyLog::log("Версия программы: " . trim(file_get_contents('version')) );
     $b = new QuEquation();
     $values = array();
 
