@@ -1,27 +1,34 @@
-<?php
-
-namespace leha;
+<?php namespace leha;
 
 use core\LogAbstract;
 use core\LogInterface;
 
-class MyLog extends LogAbstract implements LogInterface
-{
-    public function _write()
-    {
-        foreach ($this->log as $e) {
-            echo $e . "\r\n";
+
+Class MyLog extends LogAbstract implements LogInterface {
+
+    public function _log(String $str){
+        $this->log[]=$str;
+    }
+
+    /**
+     * @param String $str строка для записи в массив лога
+     */
+    public static function log(String $str){
+        self::Instance()->_log($str);
+	}
+    
+    public function _write(){
+        
+        foreach($this->log as $value){
+            echo $value."\n";
         }
+        
     }
-
-    //string and array
-    public static function log($str)
-    {
-        self::Instance()->log[] = $str;
-    }
-
-    public static function write()
-    {
+    
+    public static function write(){
         self::Instance()->_write();
     }
+
 }
+
+?>
