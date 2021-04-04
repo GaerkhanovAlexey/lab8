@@ -1,6 +1,6 @@
 <?php
 
-namespace leha;
+namespace ;
 
 Class Equation
 {
