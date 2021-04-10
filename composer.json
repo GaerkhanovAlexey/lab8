@@ -12,7 +12,7 @@
 
   "minimum-stability": "dev",
     "scripts": {
-    "post-install-cmd": [
+		"post-install-cmd": [
         "git symbolic-ref --short -q HEAD>version"
     ]
 	},
