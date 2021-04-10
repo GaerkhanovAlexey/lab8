@@ -1,0 +1,33 @@
+{
+  "name": "gaerkhanovalexey/lab8",
+  "description": "lab10",
+  "type": "project",
+  "license": "-",
+  "authors": [
+    {
+      "name": "gaerkhanov",
+      "email": "gaerkhanov@gmail.com"
+    }
+  ],
+
+  "minimum-stability": "dev",
+    "scripts": {
+    "post-install-cmd": [
+        "git symbolic-ref --short -q HEAD>version"
+    ]
+	},
+
+  "require": {
+    "gaerkhanovalexey/lab10": "^1.0"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/rok9ru/trpo-core"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/GaerkhanovAlexey/lab10.git"
+    }
+  ]
+}

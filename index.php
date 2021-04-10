@@ -3,18 +3,22 @@
 use leha\MyLog;
 use leha\QuEquation;
 
-include "core/core/EquationInterface.php";
+/*include "core/core/EquationInterface.php";
 include "core/core/LogAbstract.php";
 include "core/core/LogInterface.php";
 include "leha/MyLog.php";
 include "leha/Equation.php";
 include "leha/QuEquation.php";
-include "leha/Exception.php";
+include "leha/Exception.php";*/
+require_once __DIR__ . './vendor/autoload.php';
 
 ini_set("display_errors", 1);
 error_reporting(-1);
 
-try {
+try { 
+	if(!is_dir("log")) {
+        mkdir("log", 0700);
+    }
      MyLog::log("Версия программы: " . trim(file_get_contents('version')) );
     $b = new QuEquation();
     $values = array();
